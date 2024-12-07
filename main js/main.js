@@ -10,7 +10,7 @@ if(isNaN(numberKm) || isNaN (agePerson)){
     console.log('Entrabe le richieste devono avere un valore numerico, grazie');
 
 // trasformo il type in numero e verifico che non sia < = 0
-} else if (Number(numberKm) && Number(agePerson) <=0){
+} else if (Number(numberKm) <= 0 || Number(agePerson) <=0){
 
     console.log('Entrabe le richieste devono avere un valore numerico maggiore di 0, grazie');
 
@@ -25,7 +25,7 @@ if(isNaN(numberKm) || isNaN (agePerson)){
         priceFinal = (priceTot * 20)/100;
         let priceFinalScount = priceTot - priceFinal
 
-        
+    
         //stampo prezzo finito con max 2 decimali e cambio il punto con la virgola, con sconto Min 18
         console.log(`€${priceFinalScount.toFixed(2).replace(".",",")}`);
 
