@@ -25,7 +25,7 @@ if(isNaN(numberKm) || isNaN (agePerson)){
         priceFinal = (priceTot * 20)/100;
         let priceFinalScount = priceTot - priceFinal
 
-    
+        
         //stampo prezzo finito con max 2 decimali e cambio il punto con la virgola, con sconto Min 18
         console.log(`€${priceFinalScount.toFixed(2).replace(".",",")}`);
 
