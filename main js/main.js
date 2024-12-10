@@ -22,21 +22,19 @@ if(isNaN(numberKm) || isNaN (agePerson)){
 
     //controllo che l'età sia <= 18 + calcolo
     if(agePerson <= 18){
-        priceFinal = (priceTot * 20)/100;
-        let priceFinalScount = priceTot - priceFinal
+        priceFinal = priceFinal - ((priceTot * 20)/100);
 
         
         //stampo prezzo finito con max 2 decimali e cambio il punto con la virgola, con sconto Min 18
-        console.log(`€${priceFinalScount.toFixed(2).replace(".",",")}`);
+        console.log(`€${priceFinal.toFixed(2).replace(".",",")}`);
 
 
     //controllo che l'età sia >= di 65 + calcolo
     }else if (agePerson >= 65) {
-        priceFinal = (priceTot * 40)/100;
-        let priceFinalScount = priceTot - priceFinal
+        priceFinal = priceFinal - (priceTot * 40)/100;
 
         //stampo prezzo finito con max 2 decimali e cambio il punto con la virgola, con sconto 0ver 65
-        console.log(`€${priceFinalScount.toFixed(2).replace(".",",")}`);
+        console.log(`€${priceFinal.toFixed(2).replace(".",",")}`);
 
     }else{
         
